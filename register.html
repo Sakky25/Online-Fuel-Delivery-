@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-image: url('https://www.goteso.com/products/assets/images/on-demand-gas-delivery.png'); /* Replace 'https://example.com/background-image.jpg' with the actual URL of your background image */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Online Fuel Delivery!</h1>
+    <h2>Register</h2>
+    <form action="registration_process.php" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="contact">Contact No:</label><br>
+        <input type="text" id="contact" name="contact" required><br><br>
+        
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="18" required><br><br>
+        
+        <label for="email">GmailID:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="aadhar">Aadhar Card No.:</label><br>
+        <input type="text" id="aadhar" name="aadhar" required><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{10,}" title="Password must contain at least one number, one uppercase letter, one lowercase letter, one symbol, and be at least 10 characters long." required><br><br>
+        
+        <label for="repassword">Re-enter Password:</label><br>
+        <input type="password" id="repassword" name="repassword" required><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+    <br>
+    <a href="login.html">Back to Login</a>
+    
+    <!-- PHP code to handle registration process would go here -->
+    <!-- Upon successful registration, you would redirect the user to a confirmation page -->
+    <!-- You'd also need to handle form validation and error messages in PHP -->
+    
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        body {
+            background-image: url('https://www.goteso.com/products/assets/images/on-demand-gas-delivery.png'); /* Replace 'https://example.com/background-image.jpg' with the actual URL of your background image */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Place Your Order</h1>
+    <form method="post" action="bill.html">
+        <label for="fuel_type">Select fuel type:</label>
+        <select id="fuel_type" name="fuel_type" required>
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+        </select><br>
+        
+        <label for="location_option">Select location option:</label>
+        <select id="location_option" name="location_option" required>
+            <option value="manual">Enter location manually</option>
+            <option value="current">Use current location</option>
+        </select><br>
+        
+        <div id="manual_location" style="display: none;">
+            <label for="manual_address">Enter your location manually:</label>
+            <input type="text" id="manual_address" name="manual_address"><br>
+        </div>
+        
+        <div id="current_location" style="display: none;">
+            <!-- Here you would add JavaScript code to fetch user's current location -->
+            <!-- For demonstration purpose, I'm adding a placeholder input field -->
+            <label>Your current location:</label>
+            <input type="text" id="current_address" name="current_address" value="Dummy Current Location" disabled><br>
+        </div>
+        
+        <label for="house_no">House No.:</label>
+        <input type="text" id="house_no" name="house_no" required><br>
+        
+        <label for="floor_no">Floor No.:</label>
+        <input type="text" id="floor_no" name="floor_no" required><br>
+        
+        <label for="building_name">Building/Apartment/Colony Name:</label>
+        <input type="text" id="building_name" name="building_name" required><br>
+        
+        <label for="area_name">Area/Street Name:</label>
+        <input type="text" id="area_name" name="area_name" required><br>
+        
+        <label for="landmark_name">Landmark Name:</label>
+        <input type="text" id="landmark_name" name="landmark_name" required><br>
+        
+        <label for="payment_method">Select payment method:</label>
+        <select id="payment_method" name="payment_method" required>
+            <option value="cash">Cash</option>
+            <option value="upi">UPI</option>
+        </select><br>
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>
+
